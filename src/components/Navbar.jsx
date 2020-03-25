@@ -1,10 +1,11 @@
-import React from 'react';
-import { Link } from '@reach/router';
+import React from "react";
+import { Link } from "@reach/router";
+import S from "./StyledComponent";
 
 const Navbar = () => {
   return (
-    <nav className="nav">
-      {' '}
+    <S.NavBar>
+      {" "}
       <div>
         <Link to="/">
           Welcome<span className="dot">.</span>
@@ -15,11 +16,14 @@ const Navbar = () => {
         <Link to="/projects">
           Projects<span className="dot">.</span>
         </Link>
+        <Link to="/blog">
+          Blog<span className="dot">.</span>
+        </Link>
         <Link to="/contact">
           Hire Me<span className="dot">.</span>
         </Link>
       </div>
-    </nav>
+    </S.NavBar>
   );
 };
 
