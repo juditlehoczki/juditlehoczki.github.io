@@ -1,38 +1,75 @@
-.App {
+#root {
+  --main-colour: #ff007f;
+}
+
+App,
+html {
+  margin: 0px;
+  background: radial-gradient(circle, white 45%, black 100%);
+  background-attachment: fixed;
+  width: 100%;
+  height: 50%;
+  /* text-align: center; */
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/* navbar and footer */
+.nav {
+  position: fixed;
+  top: 0px;
+  padding: 0.5em;
+}
+.footer {
+  position: fixed;
+  bottom: 0px;
+}
+.nav,
+.footer {
+  background-color: black;
+  width: 100%;
+  color: white;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav a,
+address a {
   color: white;
+  text-decoration: none;
+  padding: 0rem 2rem;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
+  font-weight: bold;
+}
+address a {
+  padding: 0rem 0.5rem;
+}
+.nav a:hover,
+address a:hover {
+  border-bottom: 1px solid var(--main-colour);
+  color: var(--main-colour);
+  text-decoration: none;
+}
+.dot {
+  color: var(--main-colour);
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.App-link {
-  color: #61dafb;
+/* header */
+header h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 10em;
+  line-height: 0.75em;
+}
+header h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3em;
+  color: var(--main-colour);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* welcome */
+.welcome {
+  height: 100%;
+  width: 95%;
+  background-color: blue;
 }
