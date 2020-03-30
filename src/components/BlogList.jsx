@@ -39,7 +39,7 @@ class Blog extends Component {
                 key={blogPost.id}
               >
                 <h1>{blogPost.title}</h1>
-                <div>
+                <div className="intro">
                   <span>
                     {moment(blogPost.published_at).format("D MMMM YYYY")}
                   </span>
@@ -49,6 +49,7 @@ class Blog extends Component {
                   </span>
                 </div>
                 <p>{blogPost.description}</p>
+                <p className="readmore">Click for more &gt;&gt;</p>
               </Link>
             );
           })}
