@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
+import moment from "moment";
+import { Link } from "@reach/router";
+
+import S from "./StyledComponent";
 
 class BlogIndividual extends Component {
   state = {
@@ -11,7 +15,6 @@ class BlogIndividual extends Component {
     return axios
       .get(`https://dev.to/api/articles/${id}`)
       .then(response => {
-        console.log(response.data);
         this.setState({ blogPost: response.data, isLoading: false });
       })
       .catch(console.dir);
@@ -22,27 +25,40 @@ class BlogIndividual extends Component {
 
   render() {
     const { isLoading } = this.state;
-
     const {
       title,
       published_at,
       tag_list,
       body_html,
       body_markdown,
-      cover_image
+      cover_image,
+      url
     } = this.state.blogPost;
 
     if (isLoading) {
       return <p>Loading...</p>;
     } else {
+      console.log(this.state.blogPost.user);
       return (
-        <main>
-          <h2>{title}</h2>
-          <img style={{ width: 500 }} src={cover_image} alt="coverphoto" />
-          <p>{published_at}</p>
-          <p>{tag_list}</p>
+        <S.BlogIndividual>
+          {cover_image && <img src={cover_image} alt="coverphoto" />}
+          <h1>{title}</h1>
+          <div>
+            <span>Written by Judit Lehoczki on </span>
+            <span>{moment(published_at).format("D MMMM YYYY")} on Dev.to.</span>
+            <p>Tags: {tag_list}</p>
+          </div>
           <div dangerouslySetInnerHTML={{ __html: body_html }} />
-        </main>
+          <div>
+            This blog was originally posted on Dev.to. If you want to leave a
+            comment,{" "}
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              click here
+            </a>{" "}
+            to visit the original blog.
+          </div>
+          <Link to="/blog">&lt; Back</Link>
+        </S.BlogIndividual>
       );
     }
   }
