@@ -8,6 +8,8 @@ import BlogList from "./components/BlogList";
 import BlogIndividual from "./components/BlogIndividual";
 import AboutMe from "./components/AboutMe";
 import S from "./components/StyledComponent";
+import ProjectList from "./components/ProjectList";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <AboutMe path="/about" />
         <BlogList path="/blog" />
         <BlogIndividual path="/blog/:id" />
+        <ProjectList path="/projects" />
+        <Contact path="/contact" />
       </Router>
       <Footer />
     </S.App>

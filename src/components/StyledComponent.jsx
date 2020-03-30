@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 const S = {};
 
@@ -21,9 +21,8 @@ const NavAndFooter = css`
   background-color: ${theme.colours.grey1};
   width: 100%;
   text-align: center;
-  @media screen (min-width: 420) {
-    padding: 0em;
-    font-size: 5em;
+  @media (max-width: 420px) {
+    font-size: 0.6em;
   }
   a {
     color: ${theme.colours.white};
@@ -32,6 +31,9 @@ const NavAndFooter = css`
     font-family: "Amatic SC", cursive;
     font-size: 2em;
     font-weight: bold;
+    @media (max-width: 420px) {
+      padding: 5px;
+    }
   }
   a: hover {
     border-bottom: 1px solid ${theme.colours.main};
@@ -46,7 +48,7 @@ const NavAndFooter = css`
 
 const Main = css`
   border: 1px solid red;
-  padding: 8vh 8vh;
+  padding: 12vh 8vh;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -55,6 +57,71 @@ const Main = css`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+`;
+
+const Card = css`
+  border: 1px ${theme.colours.main} solid;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 5px;
+  background-color: ${theme.colours.white};
+  color: ${theme.colours.grey1};
+  text-decoration: none;
+  text-align: justify;
+  flex-grow: 1;
+
+  h1 {
+    margin: 0px;
+    font-size: 1.2em;
+    font-family: "Fredericka the Great", cursive;
+    font-weight: normal;
+  }
+
+  div {
+    margin: 0px;
+    font-size: 0.8em;
+    color: ${theme.colours.main};
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    line-height: 1.2;
+    font-family: "Josefin Slab", serif;
+  }
+
+  .intro {
+    font-size: 1em;
+    margin: 10px;
+  }
+
+  p {
+    margin: 0px;
+    font-size: 1.2em;
+    font-family: "Josefin Slab", serif;
+  }
+
+  .readmore {
+    font-size: 1em;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+`;
+
+const CardAnim = css`
+  transition: transform 300ms ease-in-out;
+  :hover {
+    transform: scale(1.1) rotate(2deg);
+    background-color: #d5cfc0;
+    box-shadow: 5px 10px 8px #888888;
+  }
+`;
+
+const Container = css`
+  ${Main}
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
 `;
 
 S.App = styled.div`
@@ -66,7 +133,13 @@ S.App = styled.div`
 S.NavBar = styled.nav`
   ${NavAndFooter}
   top: 0px;
+  @media (max-width: 420px) {
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+  }
 `;
+
 S.Footer = styled.footer`
   ${NavAndFooter}
   bottom: 0px;
@@ -75,16 +148,28 @@ S.Footer = styled.footer`
 S.Welcome = styled.main`
   ${Main}
   height: 100vh;
+
+  @keyframes welcomeAnim {
+    0% {
+      font-size: 8em;
+    }
+    100% {
+    }
+  }
+
   h1 {
     font-family: ${theme.fonts.title};
     font-size: 10em;
     line-height: 0.75em;
     color: ${theme.colours.grey1};
+    margin-bottom: 0px;
+    animation: welcomeAnim 2s;
   }
   h2 {
     font-family: ${theme.fonts.title};
     font-size: 3em;
     color: ${theme.colours.main};
+    margin-top: 0px;
   }
 `;
 
@@ -94,56 +179,87 @@ S.About = styled.main`
 `;
 
 S.BlogsListContainer = styled.main`
-  ${Main}
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
+  ${Container};
   .blogPreviewCard {
-    border: 1px ${theme.colours.main} solid;
-    border-radius: 20px;
-    min-width: 320px;
-    max-width: 600px;
-    padding: 15px;
-    margin: 5px;
-    background-color: ${theme.colours.white};
-    color: ${theme.colours.grey1};
-    text-decoration: none;
+    ${Card}
+    ${CardAnim};
+    min-width: 280px;
+    max-width: 500px;
+  }
+`;
+
+S.BlogIndividual = styled.main`
+${Main}
+font-family: ${theme.fonts.main};
+
+  font-size: 1.3em;
+  line-height: 1.6;
+  border: 3px ${theme.colours.main} solid;
+  border-radius: 20px;
+  background-color: ${theme.colours.white};
+  margin: 10vh auto;
+  width: 80%;
+  div {
+    align-self: flex-start;
     text-align: justify;
-    flex-grow: 1;
+    text-indent: 20px;
+  }
+  img {
+    width: 90%;
+    min-width: 300px;
+    border-radius: 20px;
+    border: 1px ${theme.colours.grey1} solid; 
+  }
+  h1 {
+    color: ${theme.colours.main};
+    font-family: ${theme.fonts.title};
+    text-indent: 0px;
+    font-size: 1.5em;
+  }
+  h2 {
+    font-family: ${theme.fonts.title2};
+    font-weight: normal;
+    font-size: 1.2em;
+    text-indent: 0px;
+  }
+  a {
+    color: ${theme.colours.grey1};
+    text-decoration: underline ${theme.colours.main};
+  }
+  a: hover {
+    color: ${theme.colours.white};
+    text-decoration: none;
+    background-color: ${theme.colours.grey1};
+  }
+`;
 
-    h1 {
-      margin: 0px;
-      font-size: 1.2em;
-      font-family: "Fredericka the Great", cursive;
-      font-weight: normal;
+S.ProjectsListContainer = styled.main`
+  ${Container};
+  .blogPreviewCard {
+    position: relative;
+    ${Card}
+    ${CardAnim};
+    min-width: 280px;
+    max-width: 200px;
+    min-height: 400px;
+    img {
+      background: none;
     }
-
-    div {
-      margin: 0px;
-      font-size: 0.8em;
-      color: ${theme.colours.main};
-      display: flex;
-      justify-content: space-between;
-      font-weight: bold;
+    p,
+    .intro {
+      margin: 10px 0px;
     }
-
-    span {
-      margin: 0px;
-      font-family: "Josefin Slab", serif;
-      font-size: 1.2em;
-    }
-
-    p {
-      margin: 0px;
-      font-size: 1.2em;
-      font-family: "Josefin Slab", serif;
-    }
-    :hover {
-      background-color: #d5cfc0;
-      box-shadow: 5px 10px 8px #888888;
+    .readmore {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      margin: 10px;
     }
   }
+`;
+
+S.BusinessCard = styled.main`
+  ${Main}
 `;
 
 export default S;
