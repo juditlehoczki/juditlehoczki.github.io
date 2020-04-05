@@ -2,7 +2,7 @@
   "name": "jlehoczkiv2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://juditlehoczki.github.io/",
+  "homepage": "https://juditlehoczki.github.io/portfolio",
   "dependencies": {
     "@reach/router": "^1.3.3",
     "@testing-library/jest-dom": "^4.2.4",

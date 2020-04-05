@@ -6,13 +6,13 @@ const theme = {
   fonts: {
     title: '"Amatic SC", cursive',
     title2: '"Fredericka the Great", cursive;',
-    main: '"Josefin Slab", serif'
+    main: '"Josefin Slab", serif',
   },
   colours: {
     grey1: "#333333",
     white: "#ede6d6",
-    main: "#ff007f"
-  }
+    main: "#ff007f",
+  },
 };
 
 const NavAndFooter = css`
@@ -47,7 +47,7 @@ const NavAndFooter = css`
 `;
 
 const Main = css`
-  border: 1px solid red;
+  // border: 1px solid red;
   padding: 9vh 8vh;
   height: 100%;
   width: 100%;
