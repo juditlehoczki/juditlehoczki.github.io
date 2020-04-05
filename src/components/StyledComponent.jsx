@@ -136,7 +136,6 @@ S.NavBar = styled.nav`
   @media (max-width: 420px) {
     position: fixed;
     top: 0px;
-    z-index: 1;
   }
 `;
 
@@ -259,7 +258,82 @@ S.ProjectsListContainer = styled.main`
 `;
 
 S.BusinessCard = styled.main`
-  ${Main}
+  // ${Main}
+   height: 100vh;
+
+  .flip-card {
+    background-color: transparent;
+    width: 500px;
+    height: 270px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 10px 10px 8px #888888;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    border-radius: 2px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #fcf0ef;
+    color: ${theme.colours.grey1};
+    p {
+      margin: 0px;
+    }
+  }
+
+  .flip-card-back {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      padding: 20px;
+      text-align: right;
+      font-family: Impact, Charcoal, sans-serif;
+      font-size: 1.5em;
+    }
+    i {
+      color: #FF9500;
+    }
+    span {
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      vertical-align: middle;
+    }
+    a {
+      text-decoration: none;
+      color: ${theme.colours.grey1};
+    }
+    .fullName {
+      font-size: 36px;
+      color: ${theme.colours.grey1};
+      font-style: normal;
+    }
+    background-color: #fcf0ef;
+    color: ${theme.colours.grey1};
+    transform: rotateY(180deg);
+    img {
+      border: 3px #F05D5E solid;
+      border-radius: 50%;
+    }
+  }
 `;
 
 export default S;

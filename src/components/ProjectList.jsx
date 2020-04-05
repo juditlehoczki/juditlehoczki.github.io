@@ -36,7 +36,7 @@ const projects = [
     intro: "The Classic Hangman Game",
     description:
       "The Classic Hangman Game Styled For International Women's Day",
-    techStack: "",
+    techStack: "React",
     image: hangman,
     gitHubRepo: "https://github.com/juditlehoczki/hangman",
     liveUrl: "https://hangman-iwd2020.netlify.com/",
@@ -82,8 +82,11 @@ const ProjectList = () => {
             <div className="intro">{project.intro}</div>
             <img src={project.image} alt="screenshot" width="100%" />
             <p>{project.description}</p>
+            <p>Built with {project.techStack}.</p>
             <p style={{ "padding-bottom": 20 }}>
-              Built with {project.techStack}.
+              Live at
+              <br />
+              {project.liveUrl}.
             </p>
             <p className="readmore">Click for more &gt;&gt;</p>
           </a>
