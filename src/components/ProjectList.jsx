@@ -3,6 +3,7 @@ import newsFrontend from "../img/news-frontend.png";
 import newsBackend from "../img/news-backend.png";
 import hangman from "../img/hangman.png";
 import reubenAlldridge from "../img/reuben-alldridge.png";
+import portfolio from "../img/portfolio.png";
 
 import S from "./StyledComponent";
 
@@ -16,7 +17,7 @@ const projects = [
     image: newsFrontend,
     gitHubRepo: "https://github.com/juditlehoczki/news-frontend",
     liveUrl: "https://press-jl.netlify.com/",
-    date: "March 2020"
+    date: "March 2020",
   },
   {
     name: "The Daily News - Backend",
@@ -28,7 +29,7 @@ const projects = [
     image: newsBackend,
     gitHubRepo: "https://github.com/juditlehoczki/news-backend",
     liveUrl: "https://press-jl.netlify.com/",
-    date: "March 2020"
+    date: "March 2020",
   },
   {
     name: "Hangman",
@@ -39,7 +40,7 @@ const projects = [
     image: hangman,
     gitHubRepo: "https://github.com/juditlehoczki/hangman",
     liveUrl: "https://hangman-iwd2020.netlify.com/",
-    date: "March 2020"
+    date: "March 2020",
   },
   {
     name: "Reuben Alldridge",
@@ -50,14 +51,25 @@ const projects = [
     image: reubenAlldridge,
     gitHubRepo: "https://github.com/juditlehoczki/reuben-alldridge",
     liveUrl: "https://reuben-alldridge.netlify.com/",
-    date: "March 2020"
-  }
+    date: "March 2020",
+  },
+  {
+    name: "My Personal Portfolio",
+    intro: "Judit Lehoczki - Software Developer",
+    description:
+      "A single page brochure type static website created for Reuben Alldridge, trombonist and music teacher.",
+    techStack: "Node JS, Axios, React, Reach Router, Moment, Styled-Components",
+    image: portfolio,
+    gitHubRepo: "https://github.com/juditlehoczki/juditlehoczki.github.io",
+    liveUrl: "https://juditlehoczki.me/",
+    date: "March 2020",
+  },
 ];
 
 const ProjectList = () => {
   return (
     <S.ProjectsListContainer>
-      {projects.map(project => {
+      {projects.map((project) => {
         return (
           <a
             className="blogPreviewCard"

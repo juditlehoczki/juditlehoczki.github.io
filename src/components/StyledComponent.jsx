@@ -42,13 +42,13 @@ const NavAndFooter = css`
   }
   .dot {
     color: ${theme.colours.main};
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: Arial, "Times New Roman", Times, serif;
   }
 `;
 
 const Main = css`
   border: 1px solid red;
-  padding: 12vh 8vh;
+  padding: 9vh 8vh;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
