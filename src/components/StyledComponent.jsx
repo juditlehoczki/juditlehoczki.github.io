@@ -21,6 +21,7 @@ const NavAndFooter = css`
   background-color: ${theme.colours.grey1};
   width: 100%;
   text-align: center;
+  z-index: 1;
   @media (max-width: 420px) {
     font-size: 0.6em;
   }
@@ -63,7 +64,7 @@ const Card = css`
   border: 1px ${theme.colours.main} solid;
   border-radius: 20px;
   padding: 15px;
-  margin: 5px;
+  margin: 15px;
   background-color: ${theme.colours.white};
   color: ${theme.colours.grey1};
   text-decoration: none;
@@ -237,7 +238,6 @@ S.ProjectsListContainer = styled.main`
   .blogPreviewCard {
     position: relative;
     ${Card}
-    ${CardAnim};
     min-width: 280px;
     max-width: 200px;
     min-height: 400px;
@@ -248,11 +248,31 @@ S.ProjectsListContainer = styled.main`
     .intro {
       margin: 10px 0px;
     }
-    .readmore {
+    .linkButtonsContainer {
       position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
       bottom: 5px;
-      right: 5px;
-      margin: 10px;
+      margin: 0px auto;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      a {
+        ${Card}
+        ${CardAnim}
+        background-color: #d5cfc0;
+        border-radius: 3px;
+        max-width: 100px;
+        margin: 5px;
+        text-align: center;
+        border: none;
+        i {
+          font-size: 3em;
+        }
+      }
     }
   }
 `;
@@ -272,9 +292,8 @@ S.BusinessCard = styled.main`
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.6s;
+    transition: transform 0.8s;
     transform-style: preserve-3d;
-    box-shadow: 10px 10px 8px #888888;
   }
 
   .flip-card:hover .flip-card-inner {
@@ -294,6 +313,7 @@ S.BusinessCard = styled.main`
   .flip-card-front {
     background-color: #fcf0ef;
     color: ${theme.colours.grey1};
+    box-shadow: 10px 10px 8px #888888;
     p {
       margin: 0px;
     }
@@ -303,6 +323,8 @@ S.BusinessCard = styled.main`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 10px 10px 8px #888888;
+
     div {
       padding: 20px;
       text-align: right;

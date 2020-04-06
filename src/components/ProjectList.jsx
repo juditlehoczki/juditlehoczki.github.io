@@ -9,11 +9,24 @@ import S from "./StyledComponent";
 
 const projects = [
   {
+    name: "Helping Hand",
+    intro: "A full stack mobile application for Android and iOS",
+    description:
+      "Help the vulnerable by doing their shopping for them! A full stack mobile application inspired by the current lockdown situation where people at higher risk can send in their shopping list and volunteers who live within the same area can pick them up and help out. \n \n My graduation project at Northcoders made with three other coders.",
+    techStack:
+      "Node JS, MongoDB, Mongoose, GraphQL at the backend and Dart + Flutter at the frontend",
+    image: "",
+    gitHubRepo: "",
+    liveUrl: "",
+    date: "April 2020",
+  },
+  {
     name: "The Daily News - Frontend",
     intro: "A Reddit-like news site",
     description:
       "A Reddit-like news site for articles by topics and by authors with the belonging comments and optional voting. Comes with two switchable themes. Frontend to an RESTful API server that has also been created by me.",
-    techStack: "Node JS, Axios, React, Reach Router, Moment, Styled-Components",
+    techStack:
+      "Node JS, Axios, React, Reach Router, Moment and Styled-Components",
     image: newsFrontend,
     gitHubRepo: "https://github.com/juditlehoczki/news-frontend",
     liveUrl: "https://press-jl.netlify.com/",
@@ -28,15 +41,15 @@ const projects = [
       "Node JS, Express, Knex, PostgreSQL, Nodemon. Tested with Supertest, Mocha and Chai",
     image: newsBackend,
     gitHubRepo: "https://github.com/juditlehoczki/news-backend",
-    liveUrl: "https://press-jl.netlify.com/",
+    liveUrl: "https://press-jl.herokuapp.com/api",
     date: "March 2020",
   },
   {
     name: "Hangman",
     intro: "The Classic Hangman Game",
     description:
-      "The Classic Hangman Game Styled For International Women's Day",
-    techStack: "React",
+      "The Classic Hangman Game Styled For International Women's Day. The game is available to play in two languages and in three difficulty levels. The main goal was to create something for women's day that my Mum, who doesn't speak English, can also use.",
+    techStack: "Node Js and React",
     image: hangman,
     gitHubRepo: "https://github.com/juditlehoczki/hangman",
     liveUrl: "https://hangman-iwd2020.netlify.com/",
@@ -44,21 +57,22 @@ const projects = [
   },
   {
     name: "Reuben Alldridge",
-    intro: "The Trombonist",
+    intro: "A brochure type single page website",
     description:
-      "A single page brochure type static website created for Reuben Alldridge, trombonist and music teacher.",
-    techStack: "Node JS, React, Styled Components",
+      "A brochure type single page website created for Reuben Alldridge, trombonist and music teacher.",
+    techStack: "Node JS, React and Styled Components",
     image: reubenAlldridge,
     gitHubRepo: "https://github.com/juditlehoczki/reuben-alldridge",
     liveUrl: "https://reuben-alldridge.netlify.com/",
     date: "March 2020",
   },
   {
-    name: "My Personal Portfolio",
-    intro: "Judit Lehoczki - Software Developer",
+    name: "Judit Lehoczki",
+    intro: "My Personal Portfolio Site",
     description:
       "A single page brochure type static website created for Reuben Alldridge, trombonist and music teacher.",
-    techStack: "Node JS, Axios, React, Reach Router, Moment, Styled-Components",
+    techStack:
+      "Node JS, Axios, React, Reach Router, Moment and Styled-Components",
     image: portfolio,
     gitHubRepo: "https://github.com/juditlehoczki/juditlehoczki.github.io",
     liveUrl: "https://juditlehoczki.me/",
@@ -71,25 +85,55 @@ const ProjectList = () => {
     <S.ProjectsListContainer>
       {projects.map((project) => {
         return (
-          <a
-            className="blogPreviewCard"
-            key={project.name}
-            href={project.gitHubRepo}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <div className="blogPreviewCard">
             <h1>{project.name}</h1>
             <div className="intro">{project.intro}</div>
-            <img src={project.image} alt="screenshot" width="100%" />
+            {project.image ? (
+              <img src={project.image} alt="screenshot" width="100%" />
+            ) : null}
             <p>{project.description}</p>
-            <p>Built with {project.techStack}.</p>
-            <p style={{ "padding-bottom": 20 }}>
-              Live at
-              <br />
-              {project.liveUrl}.
+            <p style={{ "padding-bottom": "100px" }}>
+              Built with {project.techStack}.
             </p>
-            <p className="readmore">Click for more &gt;&gt;</p>
-          </a>
+            <div className="linkButtonsContainer">
+              {!project.gitHubRepo ? (
+                <div style={{ "font-size": "1.2em" }}>
+                  This is my graduation project at Northcoders' bootcamp which I
+                  am currently working on with three other coders. Our deadline
+                  to finish it is 20th April so please make sure you come back
+                  to check what we've made!
+                </div>
+              ) : (
+                <div style={{ "font-size": "1.2em" }}>
+                  Want to see more? Click below!
+                </div>
+              )}
+              <div className="linkButtons">
+                {project.gitHubRepo ? (
+                  <a
+                    key={project.name}
+                    href={project.gitHubRepo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fas fa-code"></i>
+                    <p>Code.</p>
+                  </a>
+                ) : null}
+                {project.liveUrl ? (
+                  <a
+                    key={project.name}
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fas fa-laptop"></i>
+                    <p>Live site.</p>
+                  </a>
+                ) : null}
+              </div>
+            </div>
+          </div>
         );
       })}
     </S.ProjectsListContainer>

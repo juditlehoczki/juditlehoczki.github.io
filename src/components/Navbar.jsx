@@ -20,7 +20,7 @@ const Navbar = () => {
           Blog<span className="dot">.</span>
         </Link>
         <Link to="/contact">
-          Hire Me<span className="dot">!</span>
+          Contact<span className="dot">.</span>
         </Link>
       </div>
     </S.NavBar>

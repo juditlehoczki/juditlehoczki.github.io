@@ -21,7 +21,7 @@ const Contact = () => {
             </div>
             <div>
               <i className="fullName">Judit Lehoczki</i>
-              <p>Software Developer</p>
+              <p style={{ "margin-top": "0px" }}>Software Developer</p>
               <i class="far fa-heart">
                 {" "}
                 <span>
