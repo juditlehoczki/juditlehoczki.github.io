@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.699f7c4a.chunk.css",
+    "main.js": "/static/js/main.f9906995.chunk.js",
+    "main.js.map": "/static/js/main.f9906995.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5cc4d8a6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5cc4d8a6.js.map",
+    "static/js/2.4d2d093d.chunk.js": "/static/js/2.4d2d093d.chunk.js",
+    "static/js/2.4d2d093d.chunk.js.map": "/static/js/2.4d2d093d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e563ae568d320214f5f6e2d2e79c2d6b.js": "/precache-manifest.e563ae568d320214f5f6e2d2e79c2d6b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.699f7c4a.chunk.css.map": "/static/css/main.699f7c4a.chunk.css.map",
+    "static/js/2.4d2d093d.chunk.js.LICENSE.txt": "/static/js/2.4d2d093d.chunk.js.LICENSE.txt",
+    "static/media/hangman.png": "/static/media/hangman.d74dca24.png",
+    "static/media/logo.png": "/static/media/logo.6d5f15aa.png",
+    "static/media/news-backend.png": "/static/media/news-backend.f2c8874e.png",
+    "static/media/news-frontend.png": "/static/media/news-frontend.d060865a.png",
+    "static/media/portfolio.png": "/static/media/portfolio.6ec90ab1.png",
+    "static/media/profile.png": "/static/media/profile.8a81b49e.png",
+    "static/media/reuben-alldridge.png": "/static/media/reuben-alldridge.3a4c6b49.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5cc4d8a6.js",
+    "static/js/2.4d2d093d.chunk.js",
+    "static/css/main.699f7c4a.chunk.css",
+    "static/js/main.f9906995.chunk.js"
+  ]
+}
