@@ -176,6 +176,10 @@ S.Welcome = styled.main`
 S.About = styled.main`
   ${Main}
   text-align: justify;
+  img {
+    margin: 10px;
+    max-width: 800px;
+  }
 `;
 
 S.BlogsListContainer = styled.main`
