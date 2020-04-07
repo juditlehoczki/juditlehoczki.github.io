@@ -39,7 +39,6 @@ const NavAndFooter = css`
   a: hover {
     border-bottom: 1px solid ${theme.colours.main};
     color: ${theme.colours.main};
-    text-decoration: none;
   }
   .dot {
     color: ${theme.colours.main};
@@ -64,7 +63,7 @@ const Card = css`
   border: 1px ${theme.colours.main} solid;
   border-radius: 20px;
   padding: 15px;
-  margin: 15px;
+  margin: 10px;
   background-color: ${theme.colours.white};
   color: ${theme.colours.grey1};
   text-decoration: none;
@@ -156,7 +155,6 @@ S.Welcome = styled.main`
     100% {
     }
   }
-
   h1 {
     font-family: ${theme.fonts.title};
     font-size: 10em;
@@ -178,7 +176,19 @@ S.About = styled.main`
   text-align: justify;
   img {
     margin: 10px;
-    max-width: 800px;
+    max-width: 1000px;
+  }
+  a {
+    font-family: ${theme.fonts.title};
+    font-size: 1.5em;
+    text-decoration: none;
+    color: ${theme.colours.grey1};
+    padding: 5px;
+  }
+  a: hover {
+    color: ${theme.colours.main};
+    box-shadow: 2px 3px 5px #888888;
+    border-radius: 5px;
   }
 `;
 
@@ -243,8 +253,7 @@ S.ProjectsListContainer = styled.main`
     position: relative;
     ${Card}
     min-width: 280px;
-    max-width: 200px;
-    min-height: 400px;
+    max-width: 350px;
     img {
       background: none;
     }
@@ -269,7 +278,6 @@ S.ProjectsListContainer = styled.main`
         ${CardAnim}
         background-color: #d5cfc0;
         border-radius: 3px;
-        max-width: 100px;
         margin: 5px;
         text-align: center;
         border: none;
@@ -282,8 +290,16 @@ S.ProjectsListContainer = styled.main`
 `;
 
 S.BusinessCard = styled.main`
-  // ${Main}
-   height: 100vh;
+  ${Main}
+  height: 100vh;
+
+  .flipMe {
+    font-family: ${theme.fonts.title};
+    color: #9b9b9b;
+    font-size: 1.2em;
+    transform: rotate(-40deg);
+    text-align: right;
+  }
 
   .flip-card {
     background-color: transparent;
@@ -336,7 +352,7 @@ S.BusinessCard = styled.main`
       font-size: 1.5em;
     }
     i {
-      color: #FF9500;
+      color: #ff9500;
     }
     span {
       font-size: 14px;
@@ -356,7 +372,7 @@ S.BusinessCard = styled.main`
     color: ${theme.colours.grey1};
     transform: rotateY(180deg);
     img {
-      border: 3px #F05D5E solid;
+      border: 3px #f05d5e solid;
       border-radius: 50%;
     }
   }
