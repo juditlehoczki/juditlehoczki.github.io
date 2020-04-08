@@ -298,7 +298,7 @@ S.BusinessCard = styled.main`
     color: #9b9b9b;
     font-size: 1.2em;
     transform: rotate(-40deg);
-    text-align: right;
+    text-align: center;
   }
 
   .flip-card {

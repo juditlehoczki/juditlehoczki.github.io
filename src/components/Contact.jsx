@@ -14,7 +14,6 @@ const Contact = () => {
             <p style={{ fontFamily: "Courier New", fontWeight: "bold" }}>
               &lt; SoftwareDeveloper /&gt;
             </p>
-            <p className="flipMe">(Flip me!)</p>
           </div>
           <div className="flip-card-back">
             <div>
@@ -74,6 +73,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <p className="flipMe">(Flip me!)</p>
       </div>
     </S.BusinessCard>
   );

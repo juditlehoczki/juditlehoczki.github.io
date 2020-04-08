@@ -4,6 +4,7 @@ import newsBackend from "../img/news-backend.png";
 import hangman from "../img/hangman.png";
 import reubenAlldridge from "../img/reuben-alldridge.png";
 import portfolio from "../img/portfolio.png";
+import pokemon from "../img/pokemonbattler.gif";
 
 import S from "./StyledComponent";
 
@@ -45,6 +46,18 @@ const projects = [
     date: "March 2020",
   },
   {
+    name: "Judit Lehoczki",
+    intro: "My Personal Portfolio Site",
+    description:
+      "A single page brochure type static website created for Reuben Alldridge, trombonist and music teacher.",
+    techStack:
+      "Node JS, Axios, React, Reach Router, Moment and Styled-Components",
+    image: portfolio,
+    gitHubRepo: "https://github.com/juditlehoczki/juditlehoczki.github.io",
+    liveUrl: "https://juditlehoczki.me/",
+    date: "March 2020",
+  },
+  {
     name: "Hangman",
     intro: "The Classic Hangman Game",
     description:
@@ -67,16 +80,15 @@ const projects = [
     date: "March 2020",
   },
   {
-    name: "Judit Lehoczki",
-    intro: "My Personal Portfolio Site",
+    name: "Pokemon Battler",
+    intro: "A Command Line Game",
     description:
-      "A single page brochure type static website created for Reuben Alldridge, trombonist and music teacher.",
-    techStack:
-      "Node JS, Axios, React, Reach Router, Moment and Styled-Components",
-    image: portfolio,
-    gitHubRepo: "https://github.com/juditlehoczki/juditlehoczki.github.io",
-    liveUrl: "https://juditlehoczki.me/",
-    date: "March 2020",
+      "A simple Pokemon Battler game made in my coding bootcamp to practise working with JavaScript classes.",
+    techStack: "Vanilla JavaScript, Inquirer",
+    image: pokemon,
+    gitHubRepo: "https://github.com/juditlehoczki/pokemon-battler/",
+    liveUrl: "",
+    date: "February 2020",
   },
 ];
 
@@ -91,6 +103,7 @@ const ProjectList = () => {
             {project.image ? (
               <img src={project.image} alt="screenshot" width="100%" />
             ) : null}
+            <p>{project.date}</p>
             <p>{project.description}</p>
             <p style={{ "padding-bottom": "100px" }}>
               Built with {project.techStack}.
