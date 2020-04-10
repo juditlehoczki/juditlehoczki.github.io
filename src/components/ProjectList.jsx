@@ -49,7 +49,7 @@ const projects = [
     name: "Judit Lehoczki",
     intro: "My Personal Portfolio Site",
     description:
-      "A single page brochure type static website created for Reuben Alldridge, trombonist and music teacher.",
+      "This very website to showcase my portfolio and my blog that is accessed through Dev.to's API.",
     techStack:
       "Node JS, Axios, React, Reach Router, Moment and Styled-Components",
     image: portfolio,

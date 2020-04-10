@@ -49,6 +49,10 @@ const NavAndFooter = css`
 const Main = css`
   // border: 1px solid red;
   padding: 9vh 8vh;
+  @media (max-width: 420px) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -64,6 +68,9 @@ const Card = css`
   border-radius: 20px;
   padding: 15px;
   margin: 10px;
+  @media (max-width: 420px) {
+    margin: 5px;
+  }
   background-color: ${theme.colours.white};
   color: ${theme.colours.grey1};
   text-decoration: none;
@@ -297,7 +304,7 @@ S.BusinessCard = styled.main`
     font-family: ${theme.fonts.title};
     color: #9b9b9b;
     font-size: 1.2em;
-    transform: rotate(-40deg);
+    transform: rotate(15deg);
     text-align: center;
   }
 
@@ -305,6 +312,10 @@ S.BusinessCard = styled.main`
     background-color: transparent;
     width: 500px;
     height: 270px;
+    @media (max-width: 420px) {
+      width: 290px;
+      height: 470px;
+    }
   }
 
   .flip-card-inner {
@@ -344,9 +355,11 @@ S.BusinessCard = styled.main`
     justify-content: space-between;
     align-items: center;
     box-shadow: 10px 10px 8px #888888;
-
+    @media (max-width: 420px) {
+      flex-direction: column;
+    }
     div {
-      padding: 20px;
+      margin: 20px;
       text-align: right;
       font-family: Impact, Charcoal, sans-serif;
       font-size: 1.5em;
