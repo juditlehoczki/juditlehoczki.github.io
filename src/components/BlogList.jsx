@@ -7,13 +7,13 @@ import S from "./StyledComponent";
 class Blog extends Component {
   state = {
     blogPosts: [],
-    isLoading: true
+    isLoading: true,
   };
 
   fetchBlogPosts = () => {
     return axios
       .get("https://dev.to/api/articles?username=juditlehoczki")
-      .then(response => {
+      .then((response) => {
         console.log(response.data[0]);
         this.setState({ blogPosts: response.data, isLoading: false });
       })
@@ -31,7 +31,7 @@ class Blog extends Component {
     } else {
       return (
         <S.BlogsListContainer>
-          {blogPosts.map(blogPost => {
+          {blogPosts.map((blogPost) => {
             return (
               <Link
                 className="blogPreviewCard"
@@ -43,7 +43,7 @@ class Blog extends Component {
                   <span>
                     {moment(blogPost.published_at).format("D MMMM YYYY")}
                   </span>
-                  <span>
+                  <span className="reactions">
                     ✎ comments: {blogPost.comments_count} ❤︎ likes:{" "}
                     {blogPost.positive_reactions_count}
                   </span>

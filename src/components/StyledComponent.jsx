@@ -234,6 +234,11 @@ S.BlogsListContainer = styled.main`
     ${CardAnim};
     min-width: 280px;
     max-width: 500px;
+    .reactions {
+      @media (max-width: 420px) {
+        display: none;
+      }
+    }
   }
 `;
 
