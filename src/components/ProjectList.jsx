@@ -13,12 +13,14 @@ const projects = [
     name: "Helping Hand",
     intro: "A full stack mobile application for Android and iOS",
     description:
-      "Help the vulnerable by doing their shopping for them! A full stack mobile application inspired by the current lockdown situation where people at higher risk can send in their shopping list and volunteers who live within the same area can pick them up and help out. \n \n My graduation project at Northcoders made with three other coders.",
+      "Help the vulnerable by doing their shopping for them! A full stack mobile application inspired by the current lockdown situation where people at higher risk can send in their shopping list and volunteers who live within the same area can pick them up and help out. \n \n My graduation project at Northcoders made with three other coders.  Our deadline to finish this project is 20th April and the demo video will be availabe on 24th April so please make sure you come back to see what we've made!",
     techStack:
       "Node JS, MongoDB, Mongoose, GraphQL at the backend and Dart + Flutter at the frontend",
     image: "",
-    gitHubRepo: "",
-    liveUrl: "",
+    buttons: {
+      gitHubRepo: "",
+      demo: "",
+    },
     date: "April 2020",
   },
   {
@@ -29,8 +31,10 @@ const projects = [
     techStack:
       "Node JS, Axios, React, Reach Router, Moment and Styled-Components",
     image: newsFrontend,
-    gitHubRepo: "https://github.com/juditlehoczki/news-frontend",
-    liveUrl: "https://press-jl.netlify.com/",
+    buttons: {
+      gitHubRepo: "https://github.com/juditlehoczki/news-frontend",
+      liveUrl: "https://press-jl.netlify.com/",
+    },
     date: "March 2020",
   },
   {
@@ -41,8 +45,10 @@ const projects = [
     techStack:
       "Node JS, Express, Knex, PostgreSQL, Nodemon. Tested with Supertest, Mocha and Chai",
     image: newsBackend,
-    gitHubRepo: "https://github.com/juditlehoczki/news-backend",
-    liveUrl: "https://press-jl.herokuapp.com/api",
+    buttons: {
+      gitHubRepo: "https://github.com/juditlehoczki/news-backend",
+      liveUrl: "https://press-jl.herokuapp.com/api",
+    },
     date: "March 2020",
   },
   {
@@ -53,8 +59,10 @@ const projects = [
     techStack:
       "Node JS, Axios, React, Reach Router, Moment and Styled-Components",
     image: portfolio,
-    gitHubRepo: "https://github.com/juditlehoczki/juditlehoczki.github.io",
-    liveUrl: "https://juditlehoczki.me/",
+    buttons: {
+      gitHubRepo: "https://github.com/juditlehoczki/juditlehoczki.github.io",
+      liveUrl: "https://juditlehoczki.me/",
+    },
     date: "March 2020",
   },
   {
@@ -64,8 +72,10 @@ const projects = [
       "The Classic Hangman Game Styled For International Women's Day. The game is available to play in two languages and in three difficulty levels. The main goal was to create something for women's day that my Mum, who doesn't speak English, can also use.",
     techStack: "Node Js and React",
     image: hangman,
-    gitHubRepo: "https://github.com/juditlehoczki/hangman",
-    liveUrl: "https://hangman-iwd2020.netlify.com/",
+    buttons: {
+      gitHubRepo: "https://github.com/juditlehoczki/hangman",
+      liveUrl: "https://hangman-iwd2020.netlify.com/",
+    },
     date: "March 2020",
   },
   {
@@ -75,8 +85,10 @@ const projects = [
       "A brochure type single page website created for Reuben Alldridge, trombonist and music teacher.",
     techStack: "Node JS, React and Styled Components",
     image: reubenAlldridge,
-    gitHubRepo: "https://github.com/juditlehoczki/reuben-alldridge",
-    liveUrl: "https://reuben-alldridge.netlify.com/",
+    buttons: {
+      gitHubRepo: "https://github.com/juditlehoczki/reuben-alldridge",
+      liveUrl: "https://reuben-alldridge.netlify.com/",
+    },
     date: "March 2020",
   },
   {
@@ -86,8 +98,9 @@ const projects = [
       "A simple Pokemon Battler game made in my coding bootcamp to practise working with JavaScript classes.",
     techStack: "Vanilla JavaScript, Inquirer",
     image: pokemon,
-    gitHubRepo: "https://github.com/juditlehoczki/pokemon-battler/",
-    liveUrl: "",
+    buttons: {
+      gitHubRepo: "https://github.com/juditlehoczki/pokemon-battler/",
+    },
     date: "February 2020",
   },
 ];
@@ -109,23 +122,18 @@ const ProjectList = () => {
               Built with {project.techStack}.
             </p>
             <div className="linkButtonsContainer">
-              {!project.gitHubRepo ? (
-                <div style={{ "font-size": "1.2em" }}>
-                  This is my graduation project at Northcoders' bootcamp which I
-                  am currently working on with three other coders. Our deadline
-                  to finish it is 20th April so please make sure you come back
-                  to check what we've made!
-                </div>
+              {!project.liveUrl ? (
+                <div style={{ "font-size": "1.2em" }}></div>
               ) : (
                 <div style={{ "font-size": "1.2em" }}>
                   Want to see more? Click below!
                 </div>
               )}
               <div className="linkButtons">
-                {project.gitHubRepo ? (
+                {project.buttons.gitHubRepo ? (
                   <a
                     key={project.name}
-                    href={project.gitHubRepo}
+                    href={project.buttons.gitHubRepo}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -133,15 +141,26 @@ const ProjectList = () => {
                     <p>Code.</p>
                   </a>
                 ) : null}
-                {project.liveUrl ? (
+                {project.buttons.liveUrl ? (
                   <a
                     key={project.name}
-                    href={project.liveUrl}
+                    href={project.buttons.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <i class="fas fa-laptop"></i>
                     <p>Live site.</p>
+                  </a>
+                ) : null}
+                {project.buttons.demo ? (
+                  <a
+                    key={project.name}
+                    href={project.buttons.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fas fa-film"></i>
+                    <p>Demo video.</p>
                   </a>
                 ) : null}
               </div>
