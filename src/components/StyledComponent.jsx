@@ -183,7 +183,7 @@ S.About = styled.main`
   text-align: justify;
   img {
     margin: 10px;
-    max-width: 1000px;
+    max-width: 100%;
   }
   a {
     font-family: ${theme.fonts.title};
