@@ -22,9 +22,6 @@ const NavAndFooter = css`
   width: 100%;
   text-align: center;
   z-index: 1;
-  @media (max-width: 420px) {
-    font-size: 0.6em;
-  }
   a {
     color: ${theme.colours.white};
     text-decoration: none;
@@ -47,11 +44,12 @@ const NavAndFooter = css`
 `;
 
 const Main = css`
-  // border: 1px solid red;
   padding: 9vh 8vh;
   @media (max-width: 420px) {
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 75px;
+    padding-bottom: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   height: 100%;
   width: 100%;
@@ -69,7 +67,7 @@ const Card = css`
   padding: 15px;
   margin: 10px;
   @media (max-width: 420px) {
-    margin: 5px;
+    margin-bottom: 5px;
   }
   background-color: ${theme.colours.white};
   color: ${theme.colours.grey1};
@@ -138,16 +136,36 @@ S.App = styled.div`
 `;
 
 S.NavBar = styled.nav`
-  ${NavAndFooter}
+  ${NavAndFooter};
   top: 0px;
   @media (max-width: 420px) {
-    position: fixed;
-    top: 0px;
+    .pcNavbar {
+      display: none;
+    }
+    .mobileNavbar {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 1em;
+      a {
+        display: flex;
+        flex-direction: column;
+      }
+      .text {
+        font-size: 0.5em;
+        font-style: normal;
+      }
+    }
+  }
+  @media (min-width: 420px) {
+    .mobileNavbar {
+      display: none;
+    }
   }
 `;
 
 S.Footer = styled.footer`
-  ${NavAndFooter}
+  ${NavAndFooter};
   bottom: 0px;
 `;
 
@@ -157,7 +175,7 @@ S.Welcome = styled.main`
 
   @keyframes welcomeAnim {
     0% {
-      font-size: 8em;
+      font-size: 4em;
     }
     100% {
     }
@@ -165,14 +183,20 @@ S.Welcome = styled.main`
   h1 {
     font-family: ${theme.fonts.title};
     font-size: 10em;
+    @media (max-width: 420px) {
+      font-size: 8em;
+    }
     line-height: 0.75em;
     color: ${theme.colours.grey1};
     margin-bottom: 0px;
-    animation: welcomeAnim 2s;
+    animation: welcomeAnim 4s;
   }
   h2 {
     font-family: ${theme.fonts.title};
     font-size: 3em;
+    @media (max-width: 420px) {
+      font-size: 2em;
+    }
     color: ${theme.colours.main};
     margin-top: 0px;
   }
@@ -190,7 +214,11 @@ S.About = styled.main`
     font-size: 1.5em;
     text-decoration: none;
     color: ${theme.colours.grey1};
-    padding: 5px;
+    margin: 5px;
+    @media (max-width: 420px) {
+      font-size: 1.2em;
+      margin-top: 18px;
+    }
   }
   a: hover {
     color: ${theme.colours.main};
@@ -210,9 +238,8 @@ S.BlogsListContainer = styled.main`
 `;
 
 S.BlogIndividual = styled.main`
-${Main}
-font-family: ${theme.fonts.main};
-
+  ${Main};
+  font-family: ${theme.fonts.main};
   font-size: 1.3em;
   line-height: 1.6;
   border: 3px ${theme.colours.main} solid;
@@ -220,6 +247,13 @@ font-family: ${theme.fonts.main};
   background-color: ${theme.colours.white};
   margin: 10vh auto;
   width: 80%;
+  @media (max-width: 420px) {
+    line-height: 1.2;
+    width: 95%;
+    border: none;
+    padding-top: 85px;
+    margin: 0px auto;
+  }
   div {
     align-self: flex-start;
     text-align: justify;
@@ -227,9 +261,9 @@ font-family: ${theme.fonts.main};
   }
   img {
     width: 90%;
-    min-width: 300px;
+    min-width: 260px;
     border-radius: 20px;
-    border: 1px ${theme.colours.grey1} solid; 
+    border: 1px ${theme.colours.grey1} solid;
   }
   h1 {
     color: ${theme.colours.main};
@@ -306,15 +340,27 @@ S.BusinessCard = styled.main`
     font-size: 1.2em;
     transform: rotate(15deg);
     text-align: center;
+    width: 100px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    margin-left: 10px;
+    @media (max-width: 420px) {
+      padding-top: 100px;
+      width: 100%;
+      text-align: center;
+      transform: rotate(-25deg);
+    }
   }
 
   .flip-card {
-    background-color: transparent;
     width: 500px;
     height: 270px;
     @media (max-width: 420px) {
       width: 290px;
-      height: 470px;
+      height: 100%;
+      max-height: 500px;
+      max-width: 300px;
+      margin-top: 5px;
     }
   }
 
@@ -339,30 +385,37 @@ S.BusinessCard = styled.main`
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    @media (max-width: 420px) {
+      flex-direction: column;
+    }
   }
 
   .flip-card-front {
     background-color: #fcf0ef;
     color: ${theme.colours.grey1};
     box-shadow: 10px 10px 8px #888888;
-    p {
+    p,
+    img {
       margin: 0px;
+      @media (max-width: 420px) {
+        padding-top: 50px;
+      }
     }
   }
 
   .flip-card-back {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     box-shadow: 10px 10px 8px #888888;
-    @media (max-width: 420px) {
-      flex-direction: column;
-    }
     div {
       margin: 20px;
       text-align: right;
       font-family: Impact, Charcoal, sans-serif;
       font-size: 1.5em;
+      @media (max-width: 420px) {
+        margin-bottom: 0px;
+      }
     }
     i {
       color: #ff9500;
@@ -387,6 +440,7 @@ S.BusinessCard = styled.main`
     img {
       border: 3px #f05d5e solid;
       border-radius: 50%;
+      margin-left: 30px;
     }
   }
 `;

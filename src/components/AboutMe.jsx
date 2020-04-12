@@ -8,7 +8,7 @@ const AboutMe = () => {
   return (
     <S.About>
       <a href={cvPdf} download>
-        &gt;&gt; Click here to download my CV in PDF.
+        &gt;&gt; Click here to download my CV in PDF &lt; &lt;
       </a>
       <img src={cvPage1} alt="first page of my CV" />
       <img src={cvPage2} alt="second page of my CV" />
