@@ -102,6 +102,7 @@ const Card = css`
     margin: 0px;
     font-size: 1.2em;
     font-family: "Josefin Slab", serif;
+    line-height: 1.2;
   }
 
   .readmore {
