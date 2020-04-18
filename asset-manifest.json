@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.699f7c4a.chunk.css",
-    "main.js": "/static/js/main.13c9c22a.chunk.js",
-    "main.js.map": "/static/js/main.13c9c22a.chunk.js.map",
+    "main.js": "/static/js/main.5e042ce0.chunk.js",
+    "main.js.map": "/static/js/main.5e042ce0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.247ae422.js",
     "runtime-main.js.map": "/static/js/runtime-main.247ae422.js.map",
-    "static/js/2.d71bc13d.chunk.js": "/static/js/2.d71bc13d.chunk.js",
-    "static/js/2.d71bc13d.chunk.js.map": "/static/js/2.d71bc13d.chunk.js.map",
+    "static/js/2.1ad7a81b.chunk.js": "/static/js/2.1ad7a81b.chunk.js",
+    "static/js/2.1ad7a81b.chunk.js.map": "/static/js/2.1ad7a81b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c41a46f5f7bfea888d2aa2d697366223.js": "/precache-manifest.c41a46f5f7bfea888d2aa2d697366223.js",
+    "precache-manifest.c2011e7424feec2a37df6fb3b0def3c3.js": "/precache-manifest.c2011e7424feec2a37df6fb3b0def3c3.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.699f7c4a.chunk.css.map": "/static/css/main.699f7c4a.chunk.css.map",
-    "static/js/2.d71bc13d.chunk.js.LICENSE.txt": "/static/js/2.d71bc13d.chunk.js.LICENSE.txt",
-    "static/media/1.png": "/static/media/1.e97b8483.png",
-    "static/media/2.png": "/static/media/2.9b93de26.png",
+    "static/js/2.1ad7a81b.chunk.js.LICENSE.txt": "/static/js/2.1ad7a81b.chunk.js.LICENSE.txt",
+    "static/media/1.png": "/static/media/1.4923ccf7.png",
+    "static/media/2.png": "/static/media/2.b96d3585.png",
     "static/media/hangman.png": "/static/media/hangman.d74dca24.png",
-    "static/media/juditlehoczki_cv.pdf": "/static/media/juditlehoczki_cv.d36580ca.pdf",
+    "static/media/helpinghand.png": "/static/media/helpinghand.0c3eb588.png",
+    "static/media/juditlehoczki_cv.pdf": "/static/media/juditlehoczki_cv.d30f5756.pdf",
     "static/media/logo.png": "/static/media/logo.6d5f15aa.png",
     "static/media/news-backend.png": "/static/media/news-backend.f2c8874e.png",
     "static/media/news-frontend.png": "/static/media/news-frontend.d060865a.png",
@@ -26,8 +27,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.247ae422.js",
-    "static/js/2.d71bc13d.chunk.js",
+    "static/js/2.1ad7a81b.chunk.js",
     "static/css/main.699f7c4a.chunk.css",
-    "static/js/main.13c9c22a.chunk.js"
+    "static/js/main.5e042ce0.chunk.js"
   ]
 }
