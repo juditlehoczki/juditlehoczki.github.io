@@ -303,6 +303,11 @@ S.ProjectsListContainer = styled.main`
     max-width: 350px;
     img {
       background: none;
+      max-width: 100%;
+      max-height: 200px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     p,
     .intro {
