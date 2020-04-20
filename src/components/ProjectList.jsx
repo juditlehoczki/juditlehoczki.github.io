@@ -88,7 +88,7 @@ const projects = [
     image: reubenAlldridge,
     buttons: {
       gitHubRepo: "https://github.com/juditlehoczki/reuben-alldridge",
-      liveUrl: "https://reuben-alldridge.netlify.com/",
+      liveUrl: "https://www.thetrombonist.org/",
     },
     date: "March 2020",
   },
