@@ -80,7 +80,7 @@ const projects = [
     date: "March 2020",
   },
   {
-    name: "Reuben Alldridge",
+    name: "TheTromboist.org",
     intro: "A brochure type single page website",
     description:
       "A brochure type single page website created for Reuben Alldridge, trombonist and music teacher.",
