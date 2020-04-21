@@ -15,7 +15,7 @@ const projects = [
     name: "Helping Hand - Frontend",
     intro: "A full stack mobile application for Android and iOS",
     description:
-      "Help the vulnerable by doing their shopping for them! A full stack mobile application inspired by the current lockdown situation where people at higher risk can send in their shopping list and volunteers who live within the same area can pick them up and help out. My graduation project at Northcoders made with two other coders. Our deadline to finish this project is 20th April and the demo video will be live streamed on 24th April on YouTube so please make sure you come back to see what we've made!",
+      "Help the vulnerable by doing their shopping for them! A full stack mobile application inspired by the current lockdown situation where people at higher risk can send in their shopping list and volunteers who live within the same area can pick them up and help out. My graduation project at Northcoders made with two other coders. Demo video to come on 24th April!",
     techStack: "Node JS, Dart + Flutter, Firebase and Google Maps API.",
     image: helpinghand,
     buttons: {
