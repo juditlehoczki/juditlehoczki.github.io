@@ -6,21 +6,35 @@ import reubenAlldridge from "../img/reuben-alldridge.png";
 import portfolio from "../img/portfolio.png";
 import pokemon from "../img/pokemonbattler.gif";
 import helpinghand from "../img/helpinghand.png";
+import helpinghand2 from "../img/helpinghand-backend.png";
 
 import S from "./StyledComponent";
 
 const projects = [
   {
-    name: "Helping Hand",
+    name: "Helping Hand - Frontend",
     intro: "A full stack mobile application for Android and iOS",
     description:
       "Help the vulnerable by doing their shopping for them! A full stack mobile application inspired by the current lockdown situation where people at higher risk can send in their shopping list and volunteers who live within the same area can pick them up and help out. My graduation project at Northcoders made with two other coders. Our deadline to finish this project is 20th April and the demo video will be live streamed on 24th April on YouTube so please make sure you come back to see what we've made!",
-    techStack:
-      "Node JS, MongoDB, Mongoose, GraphQL, Express, Bcrypt, Firebase, Google APIs at the backend and Dart + Flutter at the frontend",
+    techStack: "Node JS, Dart + Flutter, Firebase and Google Maps API.",
     image: helpinghand,
     buttons: {
       gitHubRepo: "",
       demo: "",
+    },
+    date: "April 2020",
+  },
+  {
+    name: "Helping Hand - Backend",
+    intro: "An Express API Server with GraphQL",
+    description:
+      "Backend to Helping Hand with a MongoDB database to store users and shopping lists and a GraphQL server for handling http requests and database updates. My graduation project at Northcoders made with two other coders within our given two weeks time frame.",
+    techStack:
+      "Node JS, MongoDB, Mongoose, GraphQL, Express, Bcrypt, Firebase, Google's Geolocation and Distance Matrix APIs.",
+    image: helpinghand2,
+    buttons: {
+      gitHubRepo: "https://github.com/juditlehoczki/helping-hand-backend",
+      liveUrl: "http://helping-hand-kjc.herokuapp.com/graphql",
     },
     date: "April 2020",
   },
