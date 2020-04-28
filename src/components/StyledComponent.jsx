@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 
 const S = {};
 
@@ -211,10 +211,9 @@ S.Welcome = styled.main`
 
 S.About = styled.main`
   ${Main}
-  text-align: justify;
   img {
-    margin: 10px;
-    max-width: 100%;
+    max-height: 225px;
+    margin: 2px;
   }
   a {
     font-family: ${theme.fonts.title};
@@ -226,11 +225,43 @@ S.About = styled.main`
       font-size: 1.2em;
       margin-top: 18px;
     }
+    padding: 10px;
+  }
+  iframe {
+    @media (max-width: 420px) {
+      width: 95%;
+      height: 95%;
+    }
   }
   a: hover {
     color: ${theme.colours.main};
     box-shadow: 2px 3px 5px #888888;
     border-radius: 5px;
+  }
+  .aboutContainer {
+    width: 60%;
+    text-align: justify;
+    @media (max-width: 420px) {
+      width: 95%;
+    }
+  }
+  h1 {
+    font-family: ${theme.fonts.title};
+  }
+  h3 {
+    font-family: ${theme.fonts.title2};
+  }
+  p {
+    font-family: ${theme.fonts.main};
+    line-height: 2;
+    font-size: 1.1em;
+    @media (max-width: 420px) {
+      line-height: 1.2;
+      text-align: left;
+    }
+  }
+  .pink {
+    color: ${theme.colours.main};
   }
 `;
 

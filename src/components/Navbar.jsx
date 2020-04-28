@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "@reach/router";
+
 import S from "./StyledComponent";
 
 const Navbar = () => {
   return (
     <S.NavBar>
-      {" "}
       <div className="pcNavbar">
         <Link to="/">
           Welcome<span className="dot">.</span>
