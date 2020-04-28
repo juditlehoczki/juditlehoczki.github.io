@@ -1,22 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.699f7c4a.chunk.css",
-    "main.js": "/static/js/main.c6420f6c.chunk.js",
-    "main.js.map": "/static/js/main.c6420f6c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.247ae422.js",
-    "runtime-main.js.map": "/static/js/runtime-main.247ae422.js.map",
-    "static/js/2.550c3a52.chunk.js": "/static/js/2.550c3a52.chunk.js",
-    "static/js/2.550c3a52.chunk.js.map": "/static/js/2.550c3a52.chunk.js.map",
+    "main.js": "/static/js/main.d48571a8.chunk.js",
+    "main.js.map": "/static/js/main.d48571a8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5cc4d8a6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5cc4d8a6.js.map",
+    "static/js/2.45e64e82.chunk.js": "/static/js/2.45e64e82.chunk.js",
+    "static/js/2.45e64e82.chunk.js.map": "/static/js/2.45e64e82.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.dc347359fa791d06fb86b4e1d6afda7c.js": "/precache-manifest.dc347359fa791d06fb86b4e1d6afda7c.js",
+    "precache-manifest.d270b1fe6316533c2d356912d103e606.js": "/precache-manifest.d270b1fe6316533c2d356912d103e606.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.699f7c4a.chunk.css.map": "/static/css/main.699f7c4a.chunk.css.map",
-    "static/js/2.550c3a52.chunk.js.LICENSE.txt": "/static/js/2.550c3a52.chunk.js.LICENSE.txt",
+    "static/js/2.45e64e82.chunk.js.LICENSE.txt": "/static/js/2.45e64e82.chunk.js.LICENSE.txt",
     "static/media/1.png": "/static/media/1.81f75650.png",
     "static/media/2.png": "/static/media/2.e572ff4b.png",
+    "static/media/guardian.png": "/static/media/guardian.257deff4.png",
+    "static/media/guardian.gif": "/static/media/guardian.68cb0453.gif",
     "static/media/hangman.png": "/static/media/hangman.d74dca24.png",
+    "static/media/helping-hand.gif": "/static/media/helping-hand.dc66557b.gif",
     "static/media/helpinghand-backend.png": "/static/media/helpinghand-backend.5fa21783.png",
-    "static/media/helpinghand.png": "/static/media/helpinghand.0c3eb588.png",
+    "static/media/helpinghand.png": "/static/media/helpinghand.918575ca.png",
     "static/media/juditlehoczki_cv.pdf": "/static/media/juditlehoczki_cv.1efa027d.pdf",
     "static/media/logo.png": "/static/media/logo.6d5f15aa.png",
     "static/media/news-backend.png": "/static/media/news-backend.f2c8874e.png",
@@ -27,9 +30,9 @@
     "static/media/reuben-alldridge.png": "/static/media/reuben-alldridge.3a4c6b49.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.247ae422.js",
-    "static/js/2.550c3a52.chunk.js",
+    "static/js/runtime-main.5cc4d8a6.js",
+    "static/js/2.45e64e82.chunk.js",
     "static/css/main.699f7c4a.chunk.css",
-    "static/js/main.c6420f6c.chunk.js"
+    "static/js/main.d48571a8.chunk.js"
   ]
 }
