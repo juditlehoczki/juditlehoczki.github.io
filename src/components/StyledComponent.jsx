@@ -85,7 +85,6 @@ const Card = css`
   div {
     margin: 0px;
     font-size: 0.8em;
-    color: ${theme.colours.main};
     display: flex;
     justify-content: space-between;
     font-weight: bold;
@@ -94,8 +93,15 @@ const Card = css`
   }
 
   .intro {
-    font-size: 1em;
-    margin: 10px;
+    color: ${theme.colours.main};
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .pink {
+    color: ${theme.colours.main};
+    font-weight: bold;
   }
 
   p {
@@ -301,13 +307,16 @@ S.ProjectsListContainer = styled.main`
     ${Card}
     min-width: 280px;
     max-width: 350px;
+    .imagesContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
     img {
       background: none;
       max-width: 100%;
       max-height: 200px;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
     }
     p,
     .intro {
@@ -319,7 +328,7 @@ S.ProjectsListContainer = styled.main`
       right: 0;
       margin-left: auto;
       margin-right: auto;
-      bottom: 5px;
+      bottom: 10px;
       margin: 0px auto;
       align-self: center;
       display: flex;
