@@ -163,10 +163,10 @@ const ProjectList = () => {
             ) : null}
             <p>{project.description}</p>
             <p>
-              <span className="pink">Tech Stack:</span> {project.techStack}
+              <span>Time Frame:</span> {project.timeFrame}
             </p>
             <p style={{ "margin-bottom": "85px" }}>
-              <span className="pink">Time Frame:</span> {project.timeFrame}
+              <span className="pink">Tech Stack:</span> {project.techStack}
             </p>
             <div className="linkButtonsContainer">
               {!project.liveUrl ? (
