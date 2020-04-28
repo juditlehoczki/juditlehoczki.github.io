@@ -2,12 +2,26 @@ import React from "react";
 import S from "./StyledComponent";
 import cvPage1 from "../img/1.png";
 import cvPage2 from "../img/2.png";
+import profile from "../img/profile.png";
 import cvPdf from "../juditlehoczki_cv.pdf";
 
 const AboutMe = () => {
   return (
     <S.About>
       <div class="aboutContainer">
+        <div
+          style={{
+            textAlign: "center",
+            marginBottom: "-40px",
+            marginTop: "20px",
+          }}
+        >
+          <img
+            style={{ borderRadius: "50%" }}
+            src={profile}
+            alt="first page of my CV"
+          />
+        </div>
         <h1>Who Am I?</h1>
         <p>
           <h3>I am a Software Developer.</h3>
