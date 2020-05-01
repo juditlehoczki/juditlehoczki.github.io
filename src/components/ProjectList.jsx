@@ -37,7 +37,7 @@ const projects = [
     image: [helpinghandFE1, helpinghandFE2],
     buttons: {
       gitHubRepo: "",
-      demo: "https://youtu.be/99avgdNAwC4?t=1030",
+      demo: "https://youtu.be/0aof27FyHCc",
     },
     date: "April 2020",
     timeFrame: "2 weeks (front & backend)",
