@@ -13,6 +13,8 @@ import guardian2 from "../img/guardian.gif";
 
 import S from "./StyledComponent";
 
+// 200 x 115 to 990 x 585 --> responsive screenshots
+
 const projects = [
   {
     name: "The Guardian Search",
