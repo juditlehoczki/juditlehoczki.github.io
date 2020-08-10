@@ -119,7 +119,7 @@ const projects = [
     timeFrame: "2 days",
   },
   {
-    name: "TheTromboist.org",
+    name: "TheTrombonist.org",
     intro: "A brochure type single page website",
     description:
       "A brochure type single page website created for Reuben Alldridge, trombonist and music teacher.",

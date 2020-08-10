@@ -14,7 +14,6 @@ class Blog extends Component {
     return axios
       .get("https://dev.to/api/articles?username=juditlehoczki")
       .then((response) => {
-        console.log(response.data[0]);
         this.setState({ blogPosts: response.data, isLoading: false });
       })
       .catch(console.dir);
@@ -27,7 +26,13 @@ class Blog extends Component {
     const { blogPosts, isLoading } = this.state;
 
     if (isLoading) {
-      return <p>Loading...</p>;
+      return (
+        <S.BlogsListContainer>
+          <S.LoadingText>
+            <p>Loading...</p>
+          </S.LoadingText>
+        </S.BlogsListContainer>
+      );
     } else {
       return (
         <S.BlogsListContainer>

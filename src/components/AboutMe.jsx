@@ -1,7 +1,6 @@
 import React from "react";
 import S from "./StyledComponent";
 import cvPage1 from "../img/1.png";
-import cvPage2 from "../img/2.png";
 import profile from "../img/profile.png";
 import cvPdf from "../juditlehoczki_cv.pdf";
 
@@ -52,7 +51,15 @@ const AboutMe = () => {
             including web and mobile applications using React and Flutter.{" "}
             <br />I graduated in April 2020 where my graduation project was a
             cross-platform, full-stack mobile application: Helping Hand. You can
-            watch my graduation presentation below.
+            watch my graduation presentation{" "}
+            <a
+              href="https://www.youtube.com/embed/0aof27FyHCc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>
+            .
             <br />
             Now, after graduation, I continue to learn. I have learnt to use
             React-Native and testing with Jest and built my next mobile
@@ -72,23 +79,13 @@ const AboutMe = () => {
             </a>
             <a href={cvPdf} download>
               <img src={cvPage1} alt="first page of my CV" />
-              {/* <img src={cvPage2} alt="second page of my CV" /> */}
             </a>
-            <iframe
-              title="Helping Hand"
-              width="400"
-              height="225"
-              src="https://www.youtube.com/embed/0aof27FyHCc"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
           </div>
         </p>
 
         <h3>I am also just a normal person.</h3>
         <p>
-          I am a dog-owner wannabe, a hobby cyclist, a blogger, and occasional
+          I am a dog mum to Rocket, a hobby cyclist, a blogger, an occasional
           gamer and arts and craftser.
         </p>
         <p>

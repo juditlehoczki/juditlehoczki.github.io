@@ -8,13 +8,13 @@ import S from "./StyledComponent";
 class BlogIndividual extends Component {
   state = {
     blogPost: {},
-    isLoading: true
+    isLoading: true,
   };
 
-  fetchBlogPost = id => {
+  fetchBlogPost = (id) => {
     return axios
       .get(`https://dev.to/api/articles/${id}`)
-      .then(response => {
+      .then((response) => {
         this.setState({ blogPost: response.data, isLoading: false });
       })
       .catch(console.dir);
@@ -30,15 +30,19 @@ class BlogIndividual extends Component {
       published_at,
       tag_list,
       body_html,
-      body_markdown,
       cover_image,
-      url
+      url,
     } = this.state.blogPost;
 
     if (isLoading) {
-      return <p>Loading...</p>;
+      return (
+        <S.BlogIndividual>
+          <S.LoadingText>
+            <p>Loading...</p>;
+          </S.LoadingText>
+        </S.BlogIndividual>
+      );
     } else {
-      console.log(this.state.blogPost.user);
       return (
         <S.BlogIndividual>
           {cover_image && <img src={cover_image} alt="coverphoto" />}

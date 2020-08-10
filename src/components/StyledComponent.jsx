@@ -136,6 +136,11 @@ const Container = css`
   align-items: stretch;
 `;
 
+S.LoadingText = styled.div`
+  font-family: ${theme.fonts.title2};
+  color: ${theme.colours.main};
+`;
+
 S.App = styled.div`
   margin: 0px;
   width: 100%;
@@ -182,7 +187,7 @@ S.Welcome = styled.main`
 
   @keyframes welcomeAnim {
     0% {
-      font-size: 4em;
+      font-size: 3em;
     }
     100% {
     }
@@ -191,7 +196,7 @@ S.Welcome = styled.main`
     font-family: ${theme.fonts.title};
     font-size: 10em;
     @media (max-width: 420px) {
-      font-size: 8em;
+      font-size: 4em;
     }
     line-height: 0.75em;
     color: ${theme.colours.grey1};
@@ -217,15 +222,11 @@ S.About = styled.main`
   }
   a {
     font-family: ${theme.fonts.title};
-    font-size: 1.5em;
-    text-decoration: none;
+    font-size: 1.2em;
+    text-decoration: underline dotted ${theme.colours.main};
     color: ${theme.colours.grey1};
-    margin: 5px;
-    @media (max-width: 420px) {
-      font-size: 1.2em;
-      margin-top: 18px;
-    }
-    padding: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   iframe {
     @media (max-width: 420px) {
@@ -247,9 +248,11 @@ S.About = styled.main`
   }
   h1 {
     font-family: ${theme.fonts.title};
+    color: ${theme.colours.grey1};
   }
   h3 {
     font-family: ${theme.fonts.title2};
+    color: ${theme.colours.grey1};
   }
   p {
     font-family: ${theme.fonts.main};
@@ -296,6 +299,8 @@ S.BlogIndividual = styled.main`
     border: none;
     padding-top: 85px;
     margin: 0px auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   div {
     align-self: flex-start;
