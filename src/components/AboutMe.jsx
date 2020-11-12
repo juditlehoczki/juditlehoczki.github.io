@@ -22,6 +22,23 @@ const AboutMe = () => {
           />
         </div>
         <h1>Who Am I?</h1>
+        <p>(TLDR; download <a href={cvPdf} download>my CV</a>.)</p>
+
+             {/* <div
+            stlye={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+            }}
+          >
+            <a href={cvPdf} download>
+              Download my CV!
+              <br />
+            </a>
+            <a href={cvPdf} download>
+              <img src={cvPage1} alt="first page of my CV" />
+            </a>
+          </div> */}
         <p>
           <h3>I am a Software Developer.</h3>
           <p>
@@ -42,13 +59,20 @@ const AboutMe = () => {
             development was what I wanted to do.
             <p>So I quit my job.</p>
             I decided to invest in myself and started a 12-weeks, full-time
-            coding bootcamp at Northcoders. It is safe to say that this was the
+            coding bootcamp at{" "}
+            <a
+              href="https://northcoders.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Northcoders
+            </a>
+            . It is safe to say that this was the
             best decision I had made for a long time.
             <br />I learnt more about JavaScript fundamentals and testing with
             Mocha and Chai. I learnt how to build servers with REST APIs and
             also GraphQL. I learnt how to create SQL and MongoDB databases. I
             built frontend applications for all the backend services I created,
-            including web and mobile applications using React and Flutter.{" "}
+            including web and mobile applications using React and Flutter.
             <br />I graduated in April 2020 where my graduation project was a
             cross-platform, full-stack mobile application: Helping Hand. You can
             watch my graduation presentation{" "}
@@ -61,34 +85,44 @@ const AboutMe = () => {
             </a>
             .
             <br />
-            Now, after graduation, I continue to learn. I have learnt to use
-            React-Native and testing with Jest and built my next mobile
-            application: The Guardian Search. <br />I am also looking for a job
-            where I can fulfill my passion for coding and progress further.
           </p>
-          <div
-            stlye={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-            }}
-          >
-            <a href={cvPdf} download>
-              Download my CV!
-              <br />
+          <p>
+            Two weeks after my graduation I landed my first Software Developer job
+            at a Manchester based startup called{" "}
+            <a
+              href="https://www.bankifi.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              BankiFi
             </a>
-            <a href={cvPdf} download>
-              <img src={cvPage1} alt="first page of my CV" />
+            . I am currently working on two cross-platform mobile applications, both built with React-Native and written with TypeScript.
+            One of these projects is a mobile banking app for a well-known bank based in the UK. The other project is a new payment solution
+            App that helps small businesses get paid easier. This is built on top of the{" "}
+            <a
+              href="https://www.openbanking.org.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            Open Banking</a>
+            {" "}initiative.<br />
+          </p>
+          <p>
+              To continue my studies I am progressing with Harvard's{" "}
+            <a
+              href="https://cs50.harvard.edu/x/2020/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CS50
             </a>
-          </div>
-        </p>
-
-        <h3>I am also just a normal person.</h3>
-        <p>
-          I am a dog mum to Rocket, a hobby cyclist, a blogger, an occasional
-          gamer and arts and craftser.
-        </p>
-        <p>
+            {" "}course which I'm hoping to finish by end of the year.
+          </p>
+          <h3>I am also just a normal person.</h3>
+          <p>
+            I am a dog mum to Rocket, a hobby cyclist, a blogger, an occasional
+            gamer and arts and craftser.
+          </p>
           <p>
             Born and raised in Budapest, Hungary, former resident of Aviemore,
             Scotland, now settled in Manchester, England.

@@ -38,7 +38,7 @@ class BlogIndividual extends Component {
       return (
         <S.BlogIndividual>
           <S.LoadingText>
-            <p>Loading...</p>;
+            <p>Loading...</p>
           </S.LoadingText>
         </S.BlogIndividual>
       );

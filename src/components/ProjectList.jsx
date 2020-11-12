@@ -152,7 +152,7 @@ const ProjectList = () => {
     <S.ProjectsListContainer>
       {projects.map((project) => {
         return (
-          <div className="blogPreviewCard">
+          <div className="projectCard">
             <h1>{project.name}</h1>
             <div className="intro">{project.intro}</div>
             <p style={{ fontSize: "1em" }}>{project.date}</p>

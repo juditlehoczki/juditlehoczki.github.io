@@ -10,7 +10,9 @@ const theme = {
   },
   colours: {
     grey1: "#333333",
-    white: "#ede6d6",
+    light: "#f7f5ee",
+    lightOpacity: "rgb(247,245,238,0.25)",
+    white: "#fbfaf6",
     main: "#ff007f",
   },
 };
@@ -23,7 +25,7 @@ const NavAndFooter = css`
   text-align: center;
   z-index: 1;
   a {
-    color: ${theme.colours.white};
+    color: ${theme.colours.light};
     text-decoration: none;
     padding: 0rem 2rem;
     font-family: "Amatic SC", cursive;
@@ -69,7 +71,7 @@ const Card = css`
   @media (max-width: 420px) {
     margin-bottom: 5px;
   }
-  background-color: ${theme.colours.white};
+  background-color: ${theme.colours.light};
   color: ${theme.colours.grey1};
   text-decoration: none;
   text-align: justify;
@@ -123,7 +125,8 @@ const CardAnim = css`
   transition: transform 300ms ease-in-out;
   :hover {
     transform: scale(1.1) rotate(2deg);
-    background-color: #d5cfc0;
+    background-color: ${theme.colours.white};
+    border: 1px ${theme.colours.main} solid;
     box-shadow: 5px 10px 8px #888888;
   }
 `;
@@ -221,12 +224,12 @@ S.About = styled.main`
     margin: 2px;
   }
   a {
-    font-family: ${theme.fonts.title};
-    font-size: 1.2em;
-    text-decoration: underline dotted ${theme.colours.main};
+    text-decoration: underline ${theme.colours.main};
     color: ${theme.colours.grey1};
-    padding-left: 5px;
-    padding-right: 5px;
+  }
+  a: hover {
+    color: ${theme.colours.main};
+    box-shadow: 2px 3px 5px #888888;
   }
   iframe {
     @media (max-width: 420px) {
@@ -234,14 +237,12 @@ S.About = styled.main`
       height: 95%;
     }
   }
-  a: hover {
-    color: ${theme.colours.main};
-    box-shadow: 2px 3px 5px #888888;
-    border-radius: 5px;
-  }
   .aboutContainer {
     width: 60%;
     text-align: justify;
+    background-color: ${theme.colours.lightOpacity};
+    padding: 20px;
+    border-radius: 25px;
     @media (max-width: 420px) {
       width: 95%;
     }
@@ -290,7 +291,7 @@ S.BlogIndividual = styled.main`
   line-height: 1.6;
   border: 3px ${theme.colours.main} solid;
   border-radius: 20px;
-  background-color: ${theme.colours.white};
+  background-color: ${theme.colours.light};
   margin: 10vh auto;
   width: 80%;
   @media (max-width: 420px) {
@@ -330,7 +331,7 @@ S.BlogIndividual = styled.main`
     text-decoration: underline ${theme.colours.main};
   }
   a: hover {
-    color: ${theme.colours.white};
+    color: ${theme.colours.light};
     text-decoration: none;
     background-color: ${theme.colours.grey1};
   }
@@ -338,9 +339,10 @@ S.BlogIndividual = styled.main`
 
 S.ProjectsListContainer = styled.main`
   ${Container};
-  .blogPreviewCard {
+  .projectCard {
     position: relative;
     ${Card}
+    background-color: ${theme.colours.white};
     min-width: 280px;
     max-width: 350px;
     .imagesContainer {
@@ -373,7 +375,7 @@ S.ProjectsListContainer = styled.main`
       a {
         ${Card}
         ${CardAnim}
-        background-color: #d5cfc0;
+        background-color: ${theme.colours.light};
         border-radius: 3px;
         margin: 5px;
         text-align: center;
