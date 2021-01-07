@@ -10,6 +10,7 @@ import helpinghandFE2 from "../img/helping-hand.gif";
 import helpinghandBE from "../img/helpinghand-backend.png";
 import guardian1 from "../img/guardian.png";
 import guardian2 from "../img/guardian.gif";
+import ducknorris from "../img/ducknorris.gif";
 
 import S from "./StyledComponent";
 
@@ -17,6 +18,21 @@ import S from "./StyledComponent";
 
 const projects = [
   {
+    name: "Duck Norris",
+    intro: "A Google Chrome extension",
+    description:
+      "A virtual rubber duck debugging tool. With the Speech Recognition API the user can explain their code to Duck Norris who will record the line-by-line explanation in text format which then can be read back and also saved into a text file. My final project for Harvard's CS50 Introduction To Computer Science course.",
+    techStack:
+      "Vanilla JS, Web Speech API, Local Storage API",
+    image: [ducknorris],
+    buttons: {
+      gitHubRepo: "https://github.com/juditlehoczki/rubber-duck-debugging",
+      demo: "https://www.youtube.com/watch?v=aFo2vF9sHV0",
+    },
+    date: "December 2020",
+    timeFrame: "3 days",
+  },
+    {
     name: "The Guardian Search",
     intro: "A cross-platform mobile application",
     description:
