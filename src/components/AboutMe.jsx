@@ -108,7 +108,7 @@ const AboutMe = () => {
             {" "}initiative.<br />
           </p>
           <p>
-              To continue my studies I am progressing with Harvard's{" "}
+              To continue my studies I completed Harvard's{" "}
             <a
               href="https://cs50.harvard.edu/x/2020/"
               target="_blank"
@@ -116,7 +116,18 @@ const AboutMe = () => {
             >
               CS50
             </a>
-            {" "}course which I'm hoping to finish by end of the year.
+            {" "}Introduction To Computer Science course at the end of 2020.
+          </p>
+          <p>
+              I am also a volunteer Teaching And Technical Assistant at{" "}
+            <a
+              href="https://codeyourfuture.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Code Your Future
+            </a>
+            , a coding school for refugees, asylum seekers and disadvantaged people.
           </p>
           <h3>I am also just a normal person.</h3>
           <p>
