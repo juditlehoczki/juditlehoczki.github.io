@@ -11,12 +11,29 @@ import helpinghandBE from "../img/helpinghand-backend.png";
 import guardian1 from "../img/guardian.png";
 import guardian2 from "../img/guardian.gif";
 import ducknorris from "../img/ducknorris.gif";
+import incomeing from "../img/incomeing.png"
 
 import S from "./StyledComponent";
 
 // 200 x 115 to 990 x 585 --> responsive screenshots
 
 const projects = [
+  {
+    name: "Incom£ing",
+    intro: "The easy way to pay and get paid",
+    description:
+      "\"Request instant payments, manage your cash flow and automate your financial admin. Incom£ing uses your online and mobile banking to quickly and securely create bank transfer requests.\"\n\nMy Work: designed and built with TDD the entire registration and onboarding flow. Further development as part of a team of three.",
+    techStack:
+      "TypeScript, React-Native and Open Banking API. Tested with Jest.",
+    image: [incomeing],
+    buttons: {
+      liveUrl: "https://www.incomeing.co.uk/",
+      appStoreUrl: "https://apps.apple.com/gb/app/incom%C2%A3ing/id1538586401",
+      googlePlayUrl: "https://play.google.com/store/apps/details?id=uk.co.incomeing.mobile",
+    },
+    date: "May 2020 - present",
+    timeFrame: "ongoing",
+  },
   {
     name: "Duck Norris",
     intro: "A Google Chrome extension",
@@ -32,7 +49,7 @@ const projects = [
     date: "December 2020",
     timeFrame: "3 days",
   },
-    {
+  {
     name: "The Guardian Search",
     intro: "A cross-platform mobile application",
     description:
@@ -81,7 +98,7 @@ const projects = [
     description:
       "A Reddit-like news site for articles by topics and by authors with the belonging comments and optional voting. Comes with two switchable themes. Frontend to a RESTful API server that has also been created by me.",
     techStack:
-      "Node JS, Axios, React, Reach Router, Moment and Styled-Components.",
+      "Node JS, Axios, React, Reach Router and Styled-Components.",
     image: [newsFE],
     buttons: {
       gitHubRepo: "https://github.com/juditlehoczki/news-frontend",
@@ -111,7 +128,7 @@ const projects = [
     description:
       "This very website to showcase my portfolio and my blog that is accessed through Dev.to's API.",
     techStack:
-      "Node JS, Axios, React, Reach Router, Moment and Styled-Components.",
+      "Node JS, Axios, React, Reach Router, and Styled-Components.",
     image: [portfolio],
     buttons: {
       gitHubRepo: "https://github.com/juditlehoczki/juditlehoczki.github.io",
@@ -197,13 +214,35 @@ const ProjectList = () => {
               <div className="linkButtons">
                 {project.buttons.gitHubRepo ? (
                   <a
-                    key={project.name}
-                    href={project.buttons.gitHubRepo}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  key={project.name}
+                  href={project.buttons.gitHubRepo}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >
                     <i class="fas fa-code"></i>
                     <p>Code.</p>
+                  </a>
+                ) : null}
+                {project.buttons.appStoreUrl ? (
+                  <a
+                    key={project.name}
+                    href={project.buttons.appStoreUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-app-store-ios"></i>
+                    <p>App Store.</p>
+                  </a>
+                ) : null}
+                {project.buttons.googlePlayUrl ? (
+                  <a
+                    key={project.name}
+                    href={project.buttons.googlePlayUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-google-play"></i>
+                    <p>Google Play.</p>
                   </a>
                 ) : null}
                 {project.buttons.liveUrl ? (
