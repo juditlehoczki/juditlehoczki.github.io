@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.699f7c4a.chunk.css",
-    "main.js": "/static/js/main.cf83d800.chunk.js",
-    "main.js.map": "/static/js/main.cf83d800.chunk.js.map",
+    "main.js": "/static/js/main.ffc2d795.chunk.js",
+    "main.js.map": "/static/js/main.ffc2d795.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.247ae422.js",
     "runtime-main.js.map": "/static/js/runtime-main.247ae422.js.map",
     "static/js/2.b22df898.chunk.js": "/static/js/2.b22df898.chunk.js",
     "static/js/2.b22df898.chunk.js.map": "/static/js/2.b22df898.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.06f7bda9c3412fe5450a52f0f1392c1e.js": "/precache-manifest.06f7bda9c3412fe5450a52f0f1392c1e.js",
+    "precache-manifest.425b27096877a5a9603e3e9ae5845743.js": "/precache-manifest.425b27096877a5a9603e3e9ae5845743.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.699f7c4a.chunk.css.map": "/static/css/main.699f7c4a.chunk.css.map",
     "static/js/2.b22df898.chunk.js.LICENSE.txt": "/static/js/2.b22df898.chunk.js.LICENSE.txt",
@@ -21,7 +21,7 @@
     "static/media/helpinghand-backend.png": "/static/media/helpinghand-backend.5fa21783.png",
     "static/media/helpinghand.png": "/static/media/helpinghand.918575ca.png",
     "static/media/incomeing.png": "/static/media/incomeing.b3f09130.png",
-    "static/media/juditlehoczki_cv.pdf": "/static/media/juditlehoczki_cv.baa1e1fd.pdf",
+    "static/media/juditlehoczki_cv.pdf": "/static/media/juditlehoczki_cv.76411367.pdf",
     "static/media/logo.png": "/static/media/logo.6d5f15aa.png",
     "static/media/news-backend.png": "/static/media/news-backend.f2c8874e.png",
     "static/media/news-frontend.png": "/static/media/news-frontend.d060865a.png",
@@ -34,6 +34,6 @@
     "static/js/runtime-main.247ae422.js",
     "static/js/2.b22df898.chunk.js",
     "static/css/main.699f7c4a.chunk.css",
-    "static/js/main.cf83d800.chunk.js"
+    "static/js/main.ffc2d795.chunk.js"
   ]
 }
