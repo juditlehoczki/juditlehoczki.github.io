@@ -22,7 +22,7 @@ const projects = [
     name: "Incom£ing",
     intro: "The easy way to pay and get paid",
     description:
-      "\"Request instant payments, manage your cash flow and automate your financial admin. Incom£ing uses your online and mobile banking to quickly and securely create bank transfer requests.\"\n\nMy Work: designed and built with TDD the entire registration and onboarding flow. Further development as part of a team of three.",
+      "\"Request instant payments, manage your cash flow and automate your financial admin. Incom£ing uses your online and mobile banking to quickly and securely create bank transfer requests.\"\n\nMy Work on the application at BankiFi Ltd: designed and built with TDD the entire registration and onboarding flow. Further development as part of a team of three.",
     techStack:
       "TypeScript, React-Native and Open Banking API. Tested with Jest.",
     image: [incomeing],
@@ -32,7 +32,7 @@ const projects = [
       googlePlayUrl: "https://play.google.com/store/apps/details?id=uk.co.incomeing.mobile",
     },
     date: "May 2020 - present",
-    timeFrame: "ongoing",
+    timeFrame: "ongoing work at BankiFi",
   },
   {
     name: "Duck Norris",
